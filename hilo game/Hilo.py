@@ -14,7 +14,6 @@ def main ():
         print(f"Your score is: {Choices.points}")
         answer = Points.game_over()
     print("End")
-    pass
 
 
 class Cards:
@@ -30,7 +29,7 @@ class Choices:
 
     def options(previous, current):
         try:
-            option = int(input("Higher or lower? [h/l] "))
+            option = (input("Higher or lower? [h/l] "))
             if (option == "h") and current>previous:
                 Choices.points += 100
             elif (option == "h") and current<previous:
@@ -45,7 +44,6 @@ class Choices:
             print('You entered a wrong input, please try again')
         except ValueError as val_err:
             print('You entered a wrong input, please try again')
-
 
 
 class Points:
